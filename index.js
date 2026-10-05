@@ -91,6 +91,10 @@ app.get('/recommend', (req, res) => {
       break;
     default:
       recommendation = 'Unknown product type';
+
+      case 'keyboard':
+    recommendation = 'Logitech MX Keys';
+    break;
   }
   res.status(200).send({ recommendation });
 });
@@ -100,3 +104,7 @@ app.listen(PORT, () => {
 })
 
 module.exports = app;
+
+
+
+
